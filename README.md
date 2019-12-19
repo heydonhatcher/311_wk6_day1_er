@@ -8,9 +8,9 @@ You should already have MySQL installed from last week but if you don't, please 
 
 ##### Disable Binary Logging (Google Cloud)
 
-We need to alter a setting in our cloud database in order to import the dataset that we need. This setting has to do with "triggers" which we have not learned about directly but that you will look for more practice with later. 
+We need to alter a setting in our cloud database in order to import the dataset that we need. This setting has to do with "triggers" which we have not learned about directly but that you will look for more practice with later.
 
-1. Navigate to cloud.google.com and make sure you are logged in. 
+1. Navigate to cloud.google.com and make sure you are logged in.
 
 2. Navigate to your SQL instance (Cloud SQL)
 
@@ -25,14 +25,17 @@ We need to alter a setting in our cloud database in order to import the dataset 
 We are going to use a sample schema given to use by MySQL.
 
 1. Download the zip directory and extract it
-  * https://dev.mysql.com/doc/sakila/en/sakila-installation.html
-  * The DB is called "sakila" under the Example Databases section
+
+- https://dev.mysql.com/doc/sakila/en/sakila-installation.html
+- The DB is called "sakila" under the Example Databases section
 
 2. cd into that directory
-  * Likely `cd ~/Downloads/sakila-db`
+
+- Likely `cd ~/Downloads/sakila-db`
 
 3. Run the connect command followed by `< sakila-schema.sql` to load that database
-  * `mysql -u root -h <HOST IP FROM WORKBENCH> -p < sakila-schema.sql`
+
+- `mysql -u root -h <HOST IP FROM WORKBENCH> -p < sakila-schema.sql`
 
 4. After the operation is complete (may take a couple mins) you should have automatically been exited from the `mysql` command
 
@@ -66,13 +69,13 @@ We are going to use a sample schema given to use by MySQL.
 
 8. Answer the following questions about this diagram
 
-##### ER Diagram Diagnosis 
+##### ER Diagram Diagnosis
 
-1. What is the relationship between the "actor" and "film_actor" tables?
+1. What is the relationship between the "actor" and "film_actor" tables? One (and only one) actor to one or many film_actor.
 
-2. What does the blue diamond next to the "last_update" column on the "inventory" table represent?
+2. What does the blue diamond next to the "last_update" column on the "inventory" table represent? That it's a NOT NULL simple attribute.
 
-3. How many foreign keys does the "payments" table have? How can you tell?
+3. How many foreign keys does the "payments" table have? How can you tell? 3 because there are three connectors placed beside specific rows in the payments table that are tied to primary keys in other tables (signified with the key emoticon).
 
 ##### ER Diagram upload
 
